@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05 - Ìdici de Massa Corporal</title>
+
+    <Script>
+        // Obter peso
+        let peso = parseFloat(prompt("Informe seu peso"))
+
+        // Obter altura
+        let altura = parseFloat(prompt("Informe sua altura"))
+
+        // Cálculo de imc
+        let imc = peso / Math.pow(altura, 2)
+
+        // Exibir cálculo
+        document.write("Seu IMC é de " + imc.toFixed(2))
+
+        // Pular linha
+        document.write("<br>")
+
+        // Condicional
+        if (imc < 18.5) {
+            document.write("Abaixo do peso")
+        } else if (imc < 25) {
+            document.write("Peso normal")
+        } else if (imc < 30) {
+            document.write("Sobrepeso")
+        } else if (imc < 35) {
+            document.write("Obesidade I")
+        } else if (imc < 40) {
+            document.write("Obesidade II")
+        } else {
+            document.write("ObesidadeIII")
+        }
+
+    </Script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
