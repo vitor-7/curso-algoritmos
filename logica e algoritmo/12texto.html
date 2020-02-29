@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>12 - texto</title>
+
+    <Script>
+
+        // Variável texto
+        let texto = "JavaScript"
+
+        // Contar caracteres
+        document.write("A palavra " + texto + "possui" + texto.length + "caracteres<hr>")
+
+        // Maiúscola
+        document.write(texto.toUpperCase() + "<hr>")
+
+        //Minúsculas
+        document.write(texto.toLowerCase() + "<hr>")
+
+        // Remover caracteres
+        document.write(texto.substr(0, 4) + "<hr>")
+
+        //Remover caracteres 2
+        document.write(texto.substring(0, 4) + "<hr>")
+
+        // Trabalhando com caracteres individulmente
+        let indice = 0
+        let quantidade = texto.length
+
+        while (indice < quantidade) {
+            document.write((indice + 1) + "ª letra é:" + texto.charAt(indice) + "<br>")
+            indice++
+
+        }
+
+        // Procurar termo
+        document.write(texto.indexOf("q") + "<hr>")
+
+        if (texto.indexOf("q") == -1) {
+            document.write("A letra q não foi encontrada<hr>")
+        } else {
+            document.write("A letra q está na posição: " + texto.indexOf("q") + "<hr>")
+        }
+
+        // Começar com
+        document.write(texto.startsWith("a") + "<hr>")
+
+        //Terminar com
+        document.write(texto.endsWith("t") + "<hr>")
+
+    </Script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
