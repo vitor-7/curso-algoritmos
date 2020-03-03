@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>14 - Função</title>
+
+    <Script>
+
+        // Vetor
+        let nomes = []
+
+        // Funcão de casdastro
+        function cadastrar() {
+            // Armazenar objeto
+            let campo = document.getElementById("campo")
+
+            // validar nome duplicado
+            if (nomesDuplicados(campo.value) == false) {
+
+                // Adicionar ao vetor
+                nomes.push(campo.value)
+
+                // Atualizar lista
+                listar(campo.value)
+
+                // Limpar o campo
+                campo.value = ""
+
+                // Curso
+                campo.focus()
+            } else {
+                alert("O nome informado ja está cadastrado")
+            }
+        }
+
+        // Listagem
+        function listar(nome) {
+            // Obter a lista
+            let loista = document.getElementById("lista")
+
+            // Criar item de lista
+            let item = document.createElement("li")
+
+            // Texto do item
+            let texto = document.createTextNode(nome)
+
+            // Unir o item com texto
+            item.appendChild(texto)
+
+            // Adicionar o item na lista
+            lista.appendChild(item)
+        }
+
+        // Verificar nomes duplicados
+        function nomesDuplicados(nome) {
+
+            // Variável
+            let retorno = false
+
+            // Validação
+            for (let indice = 0; indice < nomes.length; indice++) {
+                if (nomes[indice] == nome) {
+                    retorno = true
+                    break
+                }
+
+            }
+
+            // Retorno
+            return retorno
+        }
+
+    </Script>
+
+</head>
+
+<body>
+
+    <!-- Formulario -->
+    <input type="texte" placeholder="Informe um nome" id="campo">
+    <button onclick="cadastrar()">Enviar</button>
+
+    <!-- Lista -->
+    <ul id="lista"></ul>
+
+</body>
+
+</html>
