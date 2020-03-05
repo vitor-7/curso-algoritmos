@@ -20,8 +20,36 @@
 <body>
 
     <!-- Formulário -->
-    <input type="texte" placeholder="Produto" class="form-control">
-    <button class="btn btn-primary">Cadastrar</button>
+    <div>
+
+        <p id="alerta"></p>
+
+        <input type="texte" id="produto" placeholder="Produto" class="form-control">
+        <select id="marca" class="form-control">
+            <option>Marca</option>
+            <option>Apple</option>
+            <option>Asus</option>
+            <option>Dell</option>
+            <option>Sansung</option>
+        </select>
+        <input type="texte" id="valor" placeholder="Valor" class="form-control">
+
+        <button onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
+    </div>
+    <!-- Tabela -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Valor</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
 
 </body>
 
